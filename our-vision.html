@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivenns</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="src/output.css">
+
+</head>
+
+<body>
+    <header id="siteHeader" class="site_header relative z-50 w-full bg-white py-3 transition-all duration-300 sm:py-4">
+
+        <div class="container_wrapper">
+            <div
+                class="header_inner flex min-h-[52px] items-center justify-between gap-3 sm:min-h-[63px] sm:gap-5 xl:gap-6">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo shrink-0" aria-label="Vivenns home">
+                    <img src="images/vivennslogo.png" alt="Vivenns"
+                        class="block h-auto w-[165px] max-w-[62vw] sm:w-[205px] xl:w-[211px]">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden min-w-0 flex-1 xl:block" aria-label="Primary navigation">
+                    <ul class="flex items-center justify-end gap-3 2xl:gap-3.5">
+                        <li>
+                            <a href="our-vision.html"
+                                class="nav_link active whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Our Vision
+                            </a>
+                        </li>
+                        <li>
+                            <a href="education.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Explore The City
+                            </a>
+                        </li>
+                        <li>
+                            <a href="global-education-partners.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Global Partners
+                            </a>
+                        </li>                        
+                        <li>
+                            <a href="education-hub.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Education Hub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="careers.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="the-city.html"
+                            class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Project Updates
+                            </a>
+                        </li>
+                        <li>
+                            <a href="partners-with-us.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Partner With Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop Contact Button -->
+                <div class="hidden shrink-0 xl:block">
+                    <a href="contact.html" class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]!">
+                        Contact Us
+                        <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile / Tablet Menu Button -->
+                <button id="menuToggle" type="button"
+                    class="menu_toggle inline-grid h-11 w-11 shrink-0 place-items-center rounded-full text-[#015277] transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#FCC95C] focus:ring-offset-2 xl:hidden"
+                    aria-controls="mobileMenu" aria-expanded="false">
+                    <span id="menuToggleText" class="sr-only">Open navigation menu</span>
+
+                    <svg id="menuOpenIcon"
+                        class="col-start-1 row-start-1 h-6 w-6 fill-none stroke-current stroke-[1.8] transition-all duration-200"
+                        viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+
+                    <svg id="menuCloseIcon"
+                        class="col-start-1 row-start-1 h-6 w-6 rotate-[-45deg] fill-none stroke-current stroke-[1.8] opacity-0 transition-all duration-200"
+                        viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+                        <path d="m6 6 12 12M18 6 6 18" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile / Tablet Navigation -->
+            <nav id="mobileMenu" class="mobile_menu hidden border-t border-slate-100 pb-5 pt-2 xl:hidden absolute z-10 bg-white w-full top-[100%]"
+                aria-label="Mobile navigation">
+                <ul class="m-0 list-none p-0">
+                    <li class="border-b border-slate-100">
+                        <a href="our-vision.html"
+                            class="nav_link active block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Our Vision
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="education.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Explore The City
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="global-education-partners.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Global Partners
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="education-hub.html"
+                            class="nav_link  block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Education Hub
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="careers.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Careers
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="partners-with-us.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Partner With Us
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="the-city.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Project Updates
+                        </a>
+                    </li>
+                </ul>
+
+               <div class="flex items-center justify-center w-full max-w-[90%]">
+                    <a href="contact.html" class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]! mt-4 w-full max-w-[90%] mx-auto block">
+                        Contact Us
+                    </a>
+               </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="py-3.5" aria-labelledby="city-learning-title">
+        <div class="container_wrapper">
+            <div
+                class="relative  grid overflow-hidden rounded-[20px] bg-[#005877] min-h-[480px] lg:max-h-[480px] lg:grid-cols-[35%_65%] lg:items-center">
+                <div class="space-y-4 md:space-y-5 p-6 md:p-8 md:pr-0!">
+                    <h1 class="text-white">
+                        A New Destination <br class="hidden lg:block">
+                        For Global Education.
+                    </h1>
+
+                    <p class="text-white">
+                        Vivenns International Education City is being built to bring world-class education, skills,
+                        research, innovation and opportunity together in Amaravati.
+                    </p>
+                    <p class="text-white">
+                        A connected ecosystem where international universities, students, educators, researchers,
+                        industry and the wider community can learn, collaborate and create what comes next.
+                    </p>
+
+
+                </div>
+                <div class="relative h-full">
+                    <img src="images/Vision.png" alt="Aerial view of Vivenns city for learning"
+                        class="h-full w-full object-cover hidden lg:block object-left" loading="lazy">
+                    <img src="images/Vision_(mob_ratio).png" alt="Aerial view of Vivenns city for learning"
+                        class="h-full w-full object-cover block lg:hidden object-center" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-3.5" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+            <div class="grid gap-[25px] lg:grid-cols-[0.75fr_0.75fr]">
+                <!-- Our Vision -->
+                <div class="flex justify-between flex-col  rounded-[20px] bg-[#ebf4fd]">
+                    <div class="p-6 sm:p-8 space-y-3 sm:space-y-4">
+                        <h2 class="secondary_heading">
+                            Why Now. Why India.
+
+                        </h2>
+                        <p class="text-[#5c5c5c]">
+                            India is one of the largest and fastest-growing higher education and talent markets in the
+                            world. With millions of students seeking new pathways and increasing demand for globally
+                            relevant education, the opportunity is significant.
+                        </p>
+                        <p class="text-[#5c5c5c]">
+                            India is also opening new possibilities for international universities and transnational
+                            education partnerships.
+                        </p>
+                    </div>
+                    <div class="">
+                        <img src="images/amrabati_global.png" alt="Students outside a Vivenns education building"
+                            class="w-full object-cover object-center lg:rounded-b-2xl" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- The City -->
+                <div class="relative grid min-h-[254px] grid-cols-1 overflow-hidden rounded-[20px] bg-[#005576]"
+                    style="background-image: url(images/a1.png); background-size: cover; background-position: left; background-repeat: no-repeat;">
+                    <div class="relative space-y-3 sm:space-y-4  p-6 sm:p-8 max-w-[80%] md:max-w-[85%]">
+                        <h2 class="secondary_heading text-white!">
+                            Why Andhra Pradesh.
+                        </h2>
+                        <p class="text-white">
+                            Andhra Pradesh is building for growth - with education, skills, innovation and
+                            infrastructure at the heart of its future.
+                        </p>
+                        <p class="text-white">
+                            Amaravati presents an opportunity to build a global education ecosystem from the ground up,
+                            with international institutions as active participants from the beginning.
+                        </p>
+
+                    </div>
+                    <!-- 
+                    <img src="images/map_amravati.png" alt="Students outside a Vivenns education building"
+                        class="w-full object-cover object-center lg:rounded-b-2xl"
+                        loading="lazy"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3.5">
+        <div class="container_wrapper">
+            <div class="bg-[#f1f6fe] px-6 py-8 md:px-8 md:py-12 rounded-[20px]">
+                <div class="mb-8">
+                    <div class="text-center">
+                        <h2 class="secondary_heading">What We Are Building</h2>
+                    </div>
+                </div>
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                    <article class="min-h-[222px] rounded-[13px] bg-white p-[18px] sm:p-5">
+                        <!-- <span class="mb-[27px] block text-xs font-extrabold text-[#BFA264]">01</span> -->
+                        <div class="bg-[#01527720] p-4 w-18 h-18 rounded-full flex items-center justify-center mb-4">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 14 14">
+                                <path d="M0 0h14v14H0z" fill="none" />
+                                <g fill="none" stroke="#015277" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="m7 1.367l6.5 2.817L7 7L.5 4.184z" />
+                                    <path
+                                        d="m3.45 5.469l.006 3.064S4.529 9.953 7 9.953s3.55-1.42 3.55-1.42l-.001-3.064m-8.854 5.132v-5.89m.001 8.282a1.196 1.196 0 1 0 0-2.392a1.196 1.196 0 0 0 0 2.392" />
+                                </g>
+                            </svg>
+
+                        </div>
+                        <h3 class="mb-3 text-xl font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                            World-Class
+                            Education</h3>
+                        <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">International institutions, programmes
+                            and infrastructure
+                            designed to global standards.</p>
+                    </article>
+                    <article class="min-h-[222px] rounded-[13px] bg-white p-[18px] sm:p-5">
+                        <!-- <span class="mb-[27px] block text-xs font-extrabold text-[#BFA264]">02</span> -->
+                        <div class="bg-[#01527720] p-4 w-18 h-18 rounded-full flex items-center justify-center mb-4">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                viewBox="0 0 1024 1024">
+                                <path d="M0 0h1024v1024H0z" fill="none" />
+                                <path fill="#015277"
+                                    d="M956.9 845.1L896.4 632V168c0-17.7-14.3-32-32-32h-704c-17.7 0-32 14.3-32 32v464L67.9 845.1C60.4 866 75.8 888 98 888h828.8c22.2 0 37.6-22 30.1-42.9M200.4 208h624v395h-624zm228.3 608l8.1-37h150.3l8.1 37zm224 0l-19.1-86.7c-.8-3.7-4.1-6.3-7.8-6.3H398.2c-3.8 0-7 2.6-7.8 6.3L371.3 816H151l42.3-149h638.2l42.3 149z" />
+                            </svg>
+
+                        </div>
+                        <h3 class="mb-3 text-xl font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                            Technology-Driven
+                            Learning</h3>
+                        <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">New models of learning supported by
+                            technology and
+                            digital
+                            access.</p>
+                    </article>
+                    <article class="min-h-[222px] rounded-[13px] bg-white p-[18px] sm:p-5">
+                        <!-- <span class="mb-[27px] block text-xs font-extrabold text-[#BFA264]">03</span> -->
+                        <div class="bg-[#01527720] p-4 w-18 h-18 rounded-full flex items-center justify-center mb-4">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 512 512">
+                                <path d="M0 0h512v512H0z" fill="none" />
+                                <path fill="none" stroke="#015277" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="32"
+                                    d="M402 168c-2.93 40.67-33.1 72-66 72s-63.12-31.32-66-72c-3-42.31 26.37-72 66-72s69 30.46 66 72" />
+                                <path fill="none" stroke="#015277" stroke-miterlimit="10" stroke-width="32"
+                                    d="M336 304c-65.17 0-127.84 32.37-143.54 95.41c-2.08 8.34 3.15 16.59 11.72 16.59h263.65c8.57 0 13.77-8.25 11.72-16.59C463.85 335.36 401.18 304 336 304Z" />
+                                <path fill="none" stroke="#015277" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="32"
+                                    d="M200 185.94c-2.34 32.48-26.72 58.06-53 58.06s-50.7-25.57-53-58.06C91.61 152.15 115.34 128 147 128s55.39 24.77 53 57.94" />
+                                <path fill="none" stroke="#015277" stroke-linecap="round" stroke-miterlimit="10"
+                                    stroke-width="32"
+                                    d="M206 306c-18.05-8.27-37.93-11.45-59-11.45c-52 0-102.1 25.85-114.65 76.2c-1.65 6.66 2.53 13.25 9.37 13.25H154" />
+                            </svg>
+
+                        </div>
+                        <h3 class="mb-3 text-xl font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                            Skills
+                            &amp;
+                            Careers</h3>
+                        <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">Education connected to industry,
+                            employability and the
+                            skills
+                            of
+                            tomorrow.</p>
+                    </article>
+                    <article class="min-h-[222px] rounded-[13px] bg-white p-[18px] sm:p-5">
+                        <!-- <span class="mb-[27px] block text-xs font-extrabold text-[#BFA264]">04</span> -->
+                        <div class="bg-[#01527720] p-4 w-18 h-18 rounded-full flex items-center justify-center mb-4">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="#015277"
+                                    d="M8.19 15.08c.26.36.62 1.38.81 2.05v2.86c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-2.86c.2-.68.56-1.7.82-2.06c.35-.5.72-.93 1.08-1.36c1.03-1.21 2.1-2.46 2.1-4.72c0-3.86-3.14-7-7-7s-7 3.14-7 7c0 2.29 1.07 3.53 2.1 4.73c.36.42.73.85 1.09 1.35ZM11 20v-2h2.02L13 20zm1-16c2.76 0 5 2.24 5 5c0 1.53-.64 2.28-1.62 3.42c-.37.43-.79.93-1.2 1.51c-.37.53-.7 1.42-.92 2.07h-2.52c-.21-.65-.55-1.55-.93-2.08c-.41-.57-.83-1.06-1.2-1.49C7.64 11.3 6.99 10.55 6.99 9c0-2.76 2.24-5 5-5Z" />
+                                <path fill="#015277" d="M12 7V5C9.79 5 8 6.79 8 9h2c0-1.1.9-2 2-2" />
+                            </svg>
+
+                        </div>
+                        <h3 class="mb-3 text-xl font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                            Research,
+                            Innovation &amp; Entrepreneurship</h3>
+                        <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">A platform for ideas to move from
+                            learning and research
+                            into
+                            application.</p>
+                    </article>
+                    <article class="min-h-[222px] rounded-[13px] bg-white p-[18px] sm:p-5">
+                        <div class="bg-[#01527720] p-4 w-18 h-18 rounded-full flex items-center justify-center mb-4">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="2.75em" height="2.5em" viewBox="0 0 640 512">
+                                <path d="M0 0h640v512H0z" fill="none" />
+                                <path fill="#015277"
+                                    d="m272.2 64.6l-51.1 51.1c-15.3 4.2-29.5 11.9-41.5 22.5L153 161.9c-10.2 9.1-23.5 14.1-37.2 14.1H96v128c20.4.6 39.8 8.9 54.3 23.4l35.6 35.6l7 7l27 27c6.2 6.2 16.4 6.2 22.6 0c1.7-1.7 3-3.7 3.7-5.8c2.8-7.7 9.3-13.5 17.3-15.3s16.4.6 22.2 6.5l10.8 10.6c11.6 11.6 30.4 11.6 41.9 0c5.4-5.4 8.3-12.3 8.6-19.4c.4-8.8 5.6-16.6 13.6-20.4s17.3-3 24.4 2.1c9.4 6.7 22.5 5.8 30.9-2.6c9.4-9.4 9.4-24.6 0-33.9L340.1 243l-35.8 33c-27.3 25.2-69.2 25.6-97 .9c-31.7-28.2-32.4-77.4-1.6-106.5l70.1-66.2C303.2 78.4 339.4 64 377.1 64c36.1 0 71 13.3 97.9 37.2l30.1 26.8H624c8.8 0 16 7.2 16 16v208c0 17.7-14.3 32-32 32h-32c-11.8 0-22.2-6.4-27.7-16h-84.9c-3.4 6.7-7.9 13.1-13.5 18.7c-17.1 17.1-40.8 23.8-63 20.1c-3.6 7.3-8.5 14.1-14.6 20.2c-27.3 27.3-70 30-100.4 8.1c-25.1 20.8-62.5 19.5-86-4.1L159 404l-7-7l-35.6-35.6c-5.5-5.5-12.7-8.7-20.4-9.3c0 17.6-14.4 31.9-32 31.9H32c-17.7 0-32-14.3-32-32V144c0-8.8 7.2-16 16-16h99.8c2 0 3.9-.7 5.3-2l26.5-23.6C175.5 77.7 211.4 64 248.7 64H259c4.4 0 8.9.2 13.2.6M544 320V176h-48c-5.9 0-11.6-2.2-15.9-6.1l-36.9-32.8C425 120.9 401.5 112 377.1 112c-25.4 0-49.8 9.7-68.3 27.1l-70.1 66.2c-10.3 9.8-10.1 26.3.5 35.7c9.3 8.3 23.4 8.1 32.5-.3l71.9-66.4c9.7-9 24.9-8.4 33.9 1.4s8.4 24.9-1.4 33.9l-.8.8l74.4 74.4c10 10 16.5 22.3 19.4 35.1h74.8zM64 336a16 16 0 1 0-32 0a16 16 0 1 0 32 0m528 16a16 16 0 1 0 0-32a16 16 0 1 0 0 32" />
+                            </svg>
+
+                        </div>
+                        <!-- <span class="mb-[27px] block text-xs font-extrabold text-[#BFA264]">05</span> -->
+                        <h3 class="mb-3 text-xl font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                            Collaboration
+                        </h3>
+                        <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">Connecting government, academia,
+                            industry
+                            and the wider
+                            community.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3.5">
+        <div class="container_wrapper">
+            <div class="min-h-[254px] flex items-center justify-center flex-col rounded-[20px] bg-[#005877] bg-right bg-no-repeat p-6 sm:px-8 py-10
+                        bg-[length:130%] sm:bg-[length:110%] lg:bg-[length:50%]" bis_skin_checked="1">
+
+                <div class="max-w-full space-y-3 sm:space-y-4  text-center" bis_skin_checked="1">
+                    <h2 class="secondary_heading text-white!">
+                        Build. Connect. Innovate. Educate.
+                    </h2>
+                    <p class="text-[#FFFFFF]">
+                        A new education destination for a new generation.
+                    </p>
+
+                    <!-- <div class="flex flex-col items-center gap-3 sm:flex-row  sm:items-center justify-center sm:gap-4"
+                        bis_skin_checked="1">
+                        <a href="#" class="theme_button border-white! text-white! hover:border-[#FCC95C]! hover:text-[#033064]!">
+                            Explore Vivenns
+                             <svg class="h-3 w-3 fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="theme_button bg-[#FCC95C]! hover:bg-transparent! hover:border-white! hover:text-white!">
+                            Partner with us
+                            <svg class="h-3 w-3 fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="py-3.5">
+        <div class="container_wrapper">
+            <div class="">
+                <!-- Main footer row -->
+                <div class="flex flex-col gap-5 py-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+                    <a href="index.html" class="shrink-0" aria-label="Vivenns home">
+                        <img src="images/vivennslogo.png" alt="Vivenns" class="block h-auto w-[150px] sm:w-[180px]">
+                    </a>
+
+                    <nav aria-label="Footer navigation">
+                        <ul class="flex flex-col items-start gap-3 p-0 text-sm font-medium text-[#003D7D]!
+                               sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+                            <li class="list-none">
+                                <a href="our-vision.html"
+                                    class="transition-colors active text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Our Vision
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="education.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Explore The City
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="global-education-partners.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Global Partners
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="education-hub.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Education Hub
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="careers.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Careers
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="partners-with-us.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Partner With Us
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="the-city.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Project Updates
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="contact.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- <div class="my-4 h-px bg-[#dce7f5]"></div> -->
+
+                <!-- Legal footer row -->
+                <div class="flex flex-col gap-4 py-4 text-sm leading-normal text-[#5f6368]
+                        lg:flex-row lg:items-center lg:justify-between lg:leading-none">
+                    <p class="m-0">©2026 Vivenns. All Rights Reserved</p>
+
+                    <nav aria-label="Legal navigation">
+                        <ul class="flex flex-row items-start gap-3 p-0 font-medium text-[#003D7D]!
+                               sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+                            
+                            <li class="list-none">
+                                <a href="#siteHeader"
+                                    class="transition-colors text-xs md:text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Back To Top ↑
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuOpenIcon = document.getElementById("menuOpenIcon");
+        const menuCloseIcon = document.getElementById("menuCloseIcon");
+        const menuToggleText = document.getElementById("menuToggleText");
+
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle("hidden", !open);
+            menuToggle.setAttribute("aria-expanded", String(open));
+            menuToggleText.textContent = open
+                ? "Close navigation menu"
+                : "Open navigation menu";
+
+            menuOpenIcon.classList.toggle("opacity-0", open);
+            menuCloseIcon.classList.toggle("opacity-0", !open);
+            menuCloseIcon.classList.toggle("rotate-0", open);
+            menuCloseIcon.classList.toggle("rotate-[-45deg]", !open);
+        }
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            setMobileMenu(!isOpen);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                setMobileMenu(false);
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 1280) {
+                setMobileMenu(false);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

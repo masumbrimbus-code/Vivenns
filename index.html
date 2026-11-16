@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivenns</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="src/output.css">
+
+</head>
+
+<body>
+    <header id="siteHeader" class="site_header relative z-50 w-full bg-white py-3 transition-all duration-300 sm:py-4">
+
+        <div class="container_wrapper">
+            <div
+                class="header_inner flex min-h-[52px] items-center justify-between gap-3 sm:min-h-[63px] sm:gap-5 xl:gap-6">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo shrink-0" aria-label="Vivenns home">
+                    <img src="images/vivennslogo.png" alt="Vivenns"
+                        class="block h-auto w-[165px] max-w-[62vw] sm:w-[205px] xl:w-[211px]">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden min-w-0 flex-1 xl:block" aria-label="Primary navigation">
+                    <ul class="flex items-center justify-end gap-3 2xl:gap-3.5">
+                        <li>
+                            <a href="our-vision.html"
+                                class="nav_link  whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Our Vision
+                            </a>
+                        </li>
+                        <li>
+                            <a href="education.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Explore The City
+                            </a>
+                        </li>
+                        <li>
+                            <a href="global-education-partners.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Global Partners
+                            </a>
+                        </li>                        
+                        <li>
+                            <a href="education-hub.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Education Hub
+                            </a>
+                        </li>  
+                        <li>
+                            <a href="careers.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="the-city.html"
+                            class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Project Updates
+                            </a>
+                        </li>
+                        <li>
+                            <a href="partners-with-us.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Partner With Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop Contact Button -->
+                <div class="hidden shrink-0 xl:block">
+                    <a href="contact.html"
+                        class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]!">
+                        Contact Us
+                        <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile / Tablet Menu Button -->
+                <button id="menuToggle" type="button"
+                    class="menu_toggle inline-grid h-11 w-11 shrink-0 place-items-center rounded-full text-[#015277] transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#FCC95C] focus:ring-offset-2 xl:hidden"
+                    aria-controls="mobileMenu" aria-expanded="false">
+                    <span id="menuToggleText" class="sr-only">Open navigation menu</span>
+
+                    <svg id="menuOpenIcon"
+                        class="col-start-1 row-start-1 h-6 w-6 fill-none stroke-current stroke-[1.8] transition-all duration-200"
+                        viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+
+                    <svg id="menuCloseIcon"
+                        class="col-start-1 row-start-1 h-6 w-6 rotate-[-45deg] fill-none stroke-current stroke-[1.8] opacity-0 transition-all duration-200"
+                        viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+                        <path d="m6 6 12 12M18 6 6 18" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile / Tablet Navigation -->
+            <nav id="mobileMenu"
+                class="mobile_menu hidden border-t border-slate-100 pb-5 pt-2 xl:hidden absolute z-10 bg-white w-full top-[100%]"
+                aria-label="Mobile navigation">
+                <ul class="m-0 list-none p-0">
+                    <li class="border-b border-slate-100">
+                        <a href="our-vision.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Our Vision
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="education.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Explore The City
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="global-education-partners.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Global Partners
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="education-hub.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Education Hub
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="careers.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Careers
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="partners-with-us.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Partner With Us
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="the-city.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Project Updates
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="flex items-center justify-center w-full max-w-[90%]">
+                    <a href="contact.html"
+                        class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]! mt-4 w-full max-w-[90%] mx-auto block">
+                        Contact Us
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="py-3.5" aria-labelledby="city-learning-title">
+        <div class="container_wrapper">
+            <div
+                class="relative  grid overflow-hidden rounded-[20px] bg-[#005877] lg:max-h-[480px] min-h-[480px] lg:grid-cols-[30%_70%] lg:items-center">
+                <div class="space-y-4 md:space-y-5 p-6 md:p-8 md:pr-0!">
+                    <h1 class="text-white">
+                        A City For Learning.<br class="block">
+                        <span class="text-[#E7B95D]">A World Of Possibilities.</span>
+                    </h1>
+
+                    <p class="text-white ">
+                        A connected ecosystem of global education, skills, research,
+                        innovation and opportunity, taking shape in Amaravati, Andhra Pradesh.
+                    </p>
+
+                    <a href="our-vision.html" class="theme_button light_mode">
+                        Explore Vivenns
+                        <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="relative h-full">
+                    <img src="images/n1.webp" alt="Aerial view of Vivenns city for learning"
+                        class="h-full w-full object-cover hidden lg:block object-left" loading="lazy">
+                    <img src="images/vv-hero-mo-b01.png" alt="Aerial view of Vivenns city for learning"
+                        class="h-full w-full object-cover block lg:hidden object-center" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3.5" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+            <div class="grid gap-[25px] lg:grid-cols-[1fr_0.64fr]">
+                <div class="relative min-h-125 z-0 rounded-[20px] overflow-hidden flex flex-col justify-between"
+                    style="background-image: url(images/sky.webp);">
+                    <div class="mb-4 space-y-3 sm:space-y-4 p-6 sm:p-8">
+                        <p class="eyebrow_text">Our Vision</p>
+                        <h2 class="secondary_heading">
+                            Building A New Destination
+                            <br>
+                            For Global Education.
+                        </h2>
+                        <p class="text-[#002361]">
+                            Bringing leading universities, ambitious students, research, skills and industry together in
+                            one
+                            place.
+                        </p>
+                        <a href="our-vision.html" class="theme_button">
+                            Discover Our Vision
+                            <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div>
+                        <img src="images/students-02.webp" alt="Students outside a Vivenns education building"
+                            class="h-64 w-full object-cover h-full lg:rounded-b-2xl" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="relative grid min-h-125 md:min-h-160 grid-cols-1 rounded-[20px]  bg-[#0B2849] bg-center bg-cover"
+                    style="background-image: url(images/n3.webp);">
+                    <div class="relative space-y-3 sm:space-y-4  p-6 sm:p-8 ">
+                        <p class="eyebrow_text">The City</p>
+                        <h2 class="secondary_heading text-white!">
+                            More Than A Campus.<br>
+                            A Future-ready Education<br>
+                            Ecosystem.
+                        </h2>
+                        <p class="text-white!">
+                            A place where education, research, skills, industry and everyday life come together.
+                        </p>
+                        <a href="education.html"
+                            class="theme_button border-white! text-white! hover:border-[#FCC95C]! hover:text-[#033064]!">
+                            Explore the City
+                            <svg class="h-3 w-3 fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="quote_block">
+                        <div class="icon relative -left-2 -top-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                fill="#F8C155" version="1.1" id="Icons" viewBox="0 0 32 32" xml:space="preserve">
+                                <g>
+                                    <path
+                                        d="M23,9c-2.8,0-5,2.2-5,5s2.2,5,5,5c0.3,0,0.7,0,1-0.1c-1.3,1.3-3,2.1-5,2.1c-0.6,0-1,0.4-1,1s0.4,1,1,1c5,0,9-4,9-9   C28,11.2,25.8,9,23,9z" />
+                                    <path
+                                        d="M9,9c-2.8,0-5,2.2-5,5s2.2,5,5,5c0.3,0,0.7,0,1-0.1C8.7,20.2,7,21,5,21c-0.6,0-1,0.4-1,1s0.4,1,1,1c5,0,9-4,9-9   C14,11.2,11.8,9,9,9z" />
+                                </g>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl -mt-4 text-[#015277] ml-4">A Place Where Ideas turn into
+                            opportunities.</h3>
+                    </div>
+                    <!-- <img src="images/02-.png" alt="Students outside a Vivenns education building"
+                        class="h-64 w-full object-cover object-center sm:h-full lg:mt-auto lg:h-[80%] lg:rounded-r-2xl"
+                        loading="lazy"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3.5" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+            <div class="grid gap-[25px] lg:grid-cols-[0.64fr_1fr]">
+
+                <!-- Global Education -->
+                <div class="relative grid min-h-125 grid-cols-1 overflow-hidden rounded-[20px] bg-[#f1f6fe] bg-center bg-cover bg-no-repeat"
+                    style="background-image: url(images/globe_banner.webp);">
+                    <div class="relative space-y-3 sm:space-y-4  p-6 lg:p-8">
+                        <p class="eyebrow_text">Global Education</p>
+                        <h2 class="secondary_heading text-white!">
+                            The World’s Premier <br>
+                            Universities Are Here.
+                        </h2>
+                        <p class="text-white!">
+                            Bringing leading international universities and education partners to Amaravati - creating
+                            new opportunities to study, collaborate and build a global future.
+                        </p>
+                        <a href="global-education-partners.html"
+                            class="theme_button border-white! text-white! hover:border-[#FCC95C]! hover:text-[#033064]!">
+                            Explore our Global Education Partners
+                            <svg class="h-3 w-3 fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <img src="images/globe.webp" alt="Students outside a Vivenns education building"
+                        class="h-64 w-full object-cover object-center lg:h-full " loading="lazy">
+
+
+                </div>
+
+                <!-- Careers -->
+                <div class="">
+                    <div class="grid overflow-hidden relative rounded-[20px] pt-10 bg-[#f1f6fe] sm:grid-cols-[1fr_0.48fr] bg-cover bg-no-repeat bg-top"
+                        style="background-image: url(images/n5.png);">
+                        <div class="space-y-3 sm:space-y-4 max-w-[340px]  p-6 lg:pr-0">
+                            <p class="eyebrow_text">Careers</p>
+                            <h2 class="secondary_heading">
+                                Building Skills. <br>
+                                Building Careers.
+                            </h2>
+                            <p class="text-[#002361]">
+                                Bringing leading universities, ambitious students, research, skills and industry
+                                together in
+                                one place.
+                            </p>
+                            <a href="careers.html" class="theme_button">
+                                Explore Vivenns Careers
+                                <svg class="h-3 w-3 fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                    aria-hidden="true">
+                                    <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <!-- <img src="images/05-.png" alt="Students outside a Vivenns education building"
+                            class="w-full object-contain object-bottom  mt-auto lg:h-[75%] lg:rounded-r-2xl" loading="lazy"> -->
+                    </div>
+                    <div class="mt-4 overflow-hidden rounded-[20px] bg-[#f1f6fe] grid sm:grid-cols-[1fr_0.70fr]">
+                        <img src="images/n10.webp" alt="Students outside a Vivenns education building"
+                            class="w-full  mt-auto h-full lg:rounded-r-2xl hidden sm:block" loading="lazy">
+                        <img src="images/k1.png" alt="Students outside a Vivenns education building"
+                            class="w-full  mt-auto h-full lg:rounded-t-2xl block sm:hidden" loading="lazy">
+                        <div class="space-y-3 sm:space-y-4 sm:ml-auto p-6 md:p-8">
+                            <h2 class="secondary_heading">
+                                A City In <br>
+                                The Making.
+                            </h2>
+                            <p class="text-[#002361]!">
+                                Follow the partnerships, milestones and ideas bringing Vivenns International Education
+                                City to life.
+                            </p>
+                            <a href="the-city.html" class="theme_button">
+                                Project Updates
+                                <svg class="h-3 w-3 fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                    aria-hidden="true">
+                                    <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-3.5" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+            <div class="grid gap-[25px] min-h-80 lg:grid-cols-[1fr]">
+
+                <!-- The City -->
+                <div class="relative grid min-h-[254px] grid-cols-1 overflow-hidden rounded-[20px] bg-[#f1f6fe] bg-cover bg-center bg-no-repeat lg:grid-cols-2"
+                    style="background-image: url(images/leaning-bg.png);">
+
+                    <div class="relative z-10 space-y-3 sm:space-y-4  p-6 sm:p-8">
+                        <p class="eyebrow_text">The City</p>
+                        <h2 class="secondary_heading text-white!">
+                            Global Learning <br>
+                            Starts Today.
+                        </h2>
+                        <p class="text-white!">
+                            The Vivenns International Explore The City at Mangalagiri is where the journey begins.
+                        </p>
+                        <a href="education-hub.html"
+                            class="theme_button border-white! text-white! hover:border-[#FCC95C]! hover:text-[#033064]!">
+                            Explore the Mangalagiri Hub
+                            <svg class="h-3 w-3 fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="hidden lg:block lg:mt-auto lg:h-[80%] lg:w-full lg:rounded-r-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-3.5" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+            <div class="grid gap-[25px] min-h-80 lg:grid-cols-[0.90fr_0.60fr]">
+
+                <!-- Partnership -->
+                <div class="rounded-[20px] grid lg:grid-cols-[0.75fr_0.85fr] overflow-hidden  bg-[#f1f6fe] bg-cover bg-center bg-no-repeat "
+                    style="background-image: url(images/partner_banner.webp); ">
+
+                    <div class=" space-y-3 sm:space-y-4  p-6 sm:p-8 ">
+                        <p class="eyebrow_text">Transnational Education (TNE) Partnerships</p>
+                        <h2 class="secondary_heading">
+                            Build With Us.
+                        </h2>
+                        <p class="text-[#002361]">
+                            Vivenns Group serves as a premier Academic Infrastructure Service Provider (AISP) and
+                            end-to-end Transnational Education (TNE) delivery partner.
+                        </p>
+                        <a href="partners-with-us.html" class="theme_button">
+                            Partner With Us
+                            <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <img src="images/partner_image.webp" alt="Students outside a Vivenns education building"
+                        class=" lg:mt-auto lg:h-full " loading="lazy">
+                </div>
+                <!-- Our Vision -->
+                <div class="min-h-[254px]  rounded-[20px] bg-[#003D7D] bg-center bg-cover bg-no-repeat p-6 sm:p-8"
+                    style="background-image: url(images/09-.png);">
+
+                    <div class="max-w-full sm:text-center mx-auto space-y-3 sm:space-y-4 relative z-10">
+                        <h2 class="secondary_heading text-white!">
+                            Be Part Of What's Next.
+                        </h2>
+                        <p class="text-white">
+                            Whether you want to learn, teach, partner, innovate or build, there is a place for you in
+                            the Vivenns ecosystem.
+                        </p>
+
+                        <div
+                            class="flex flex-col justify-center  items-start gap-3 sm:flex-row sm:items-center sm:gap-4">
+                            <a href="our-vision.html"
+                                class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]!">
+                                Explore Vivenns
+                                <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <!-- <a href="our-vision.html" class="theme_button light_line ">
+                                Partner with us
+                                <svg class="h-3 w-3 fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                    aria-hidden="true">
+                                    <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3.5 hidden" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+            <div class="grid gap-[25px] lg:grid-cols-[0.64fr_0.60fr]">
+
+                <!-- The Journey -->
+                <div class="relative min-h-[254px] overflow-hidden rounded-[20px] bg-[#f1f6fe] bg-no-repeat bg-center bg-cover"
+                    style="background-image: url(images/08-.png);">
+
+                    <div
+                        class="relative  z-10 max-w-full space-y-3 sm:space-y-4  p-6 sm:max-w-[40%] sm:p-8 lg:max-w-[50%] ml-auto">
+                        <p class="eyebrow_text">The Journey</p>
+                        <h2 class="secondary_heading">
+                            A City In <br>
+                            The Making.
+                        </h2>
+                        <p class="text-[#5c5c5c]">
+                            Follow the partnerships, milestones and ideas bringing Vivenns International Education City
+                            to life.
+                        </p>
+                        <a href="the-city.html" class="theme_button">
+                            Project Updates
+                            <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-3.5">
+        <div class="container_wrapper">
+            <div class="">
+                <!-- Main footer row -->
+                <div class="flex flex-col gap-5 py-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+                    <a href="index.html" class="shrink-0" aria-label="Vivenns home">
+                        <img src="images/vivennslogo.png" alt="Vivenns" class="block h-auto w-[150px] sm:w-[180px]">
+                    </a>
+
+                    <nav aria-label="Footer navigation">
+                        <ul class="flex flex-col items-start gap-3 p-0 text-sm font-medium text-[#003D7D]!
+                               sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+                            <li class="list-none">
+                                <a href="our-vision.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Our Vision
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="education.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Explore The City
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="global-education-partners.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Global Partners
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="education-hub.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Education Hub
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="careers.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Careers
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="partners-with-us.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Partner With Us
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="the-city.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Project Updates
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="contact.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- <div class="my-4 h-px bg-[#dce7f5]"></div> -->
+
+                <!-- Legal footer row -->
+                <div class="flex flex-col gap-4 py-4 text-sm leading-normal text-[#5f6368]
+                        lg:flex-row lg:items-center lg:justify-between lg:leading-none">
+                    <p class="m-0">©2026 Vivenns. All Rights Reserved</p>
+
+                    <nav aria-label="Legal navigation">
+                        <ul class="flex flex-row items-start gap-3 p-0 font-medium text-[#003D7D]!
+                               sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">                            
+                            <li class="list-none">
+                                <a href="#siteHeader"
+                                    class="transition-colors text-xs md:text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Back To Top ↑
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuOpenIcon = document.getElementById("menuOpenIcon");
+        const menuCloseIcon = document.getElementById("menuCloseIcon");
+        const menuToggleText = document.getElementById("menuToggleText");
+
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle("hidden", !open);
+            menuToggle.setAttribute("aria-expanded", String(open));
+            menuToggleText.textContent = open
+                ? "Close navigation menu"
+                : "Open navigation menu";
+
+            menuOpenIcon.classList.toggle("opacity-0", open);
+            menuCloseIcon.classList.toggle("opacity-0", !open);
+            menuCloseIcon.classList.toggle("rotate-0", open);
+            menuCloseIcon.classList.toggle("rotate-[-45deg]", !open);
+        }
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            setMobileMenu(!isOpen);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                setMobileMenu(false);
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 1280) {
+                setMobileMenu(false);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

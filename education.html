@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivenns</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="src/output.css">
+
+</head>
+
+<body>
+    <header id="siteHeader" class="site_header relative z-50 w-full bg-white py-3 transition-all duration-300 sm:py-4">
+
+        <div class="container_wrapper">
+            <div
+                class="header_inner flex min-h-[52px] items-center justify-between gap-3 sm:min-h-[63px] sm:gap-5 xl:gap-6">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo shrink-0" aria-label="Vivenns home">
+                    <img src="images/vivennslogo.png" alt="Vivenns"
+                        class="block h-auto w-[165px] max-w-[62vw] sm:w-[205px] xl:w-[211px]">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden min-w-0 flex-1 xl:block" aria-label="Primary navigation">
+                    <ul class="flex items-center justify-end gap-3 2xl:gap-3.5">
+                        <li>
+                            <a href="our-vision.html"
+                                class="nav_link  whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Our Vision
+                            </a>
+                        </li>
+                        <li>
+                            <a href="education.html"
+                                class="nav_link active whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Explore The City
+                            </a>
+                        </li>
+                        <li>
+                            <a href="global-education-partners.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Global Partners
+                            </a>
+                        </li>                        
+                        <li>
+                            <a href="education-hub.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Education Hub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="careers.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="the-city.html"
+                            class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Project Updates
+                            </a>
+                        </li>
+                        <li>
+                            <a href="partners-with-us.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Partner With Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop Contact Button -->
+                <div class="hidden shrink-0 xl:block">
+                    <a href="contact.html" class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]!">
+                        Contact Us
+                        <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16"
+                                aria-hidden="true">
+                                <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile / Tablet Menu Button -->
+                <button id="menuToggle" type="button"
+                    class="menu_toggle inline-grid h-11 w-11 shrink-0 place-items-center rounded-full text-[#015277] transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#FCC95C] focus:ring-offset-2 xl:hidden"
+                    aria-controls="mobileMenu" aria-expanded="false">
+                    <span id="menuToggleText" class="sr-only">Open navigation menu</span>
+
+                    <svg id="menuOpenIcon"
+                        class="col-start-1 row-start-1 h-6 w-6 fill-none stroke-current stroke-[1.8] transition-all duration-200"
+                        viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+
+                    <svg id="menuCloseIcon"
+                        class="col-start-1 row-start-1 h-6 w-6 rotate-[-45deg] fill-none stroke-current stroke-[1.8] opacity-0 transition-all duration-200"
+                        viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+                        <path d="m6 6 12 12M18 6 6 18" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile / Tablet Navigation -->
+            <nav id="mobileMenu" class="mobile_menu hidden border-t border-slate-100 pb-5 pt-2 xl:hidden absolute z-10 bg-white w-full top-[100%]"
+                aria-label="Mobile navigation">
+                <ul class="m-0 list-none p-0">
+                    <li class="border-b border-slate-100">
+                        <a href="our-vision.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Our Vision
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="education.html"
+                            class="nav_link active block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Explore The City
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="global-education-partners.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Global Partners
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="education-hub.html"
+                            class="nav_link  block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Education Hub
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="careers.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Careers
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="partners-with-us.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Partner With Us
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="the-city.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Project Updates
+                        </a>
+                    </li>
+                </ul>
+
+               <div class="flex items-center justify-center w-full max-w-[90%]">
+                    <a href="contact.html" class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]! mt-4 w-full max-w-[90%] mx-auto block">
+                        Contact Us
+                    </a>
+               </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="py-3.5" aria-labelledby="city-learning-title">
+        <div class="container_wrapper">
+            <div
+                class="relative  grid overflow-hidden rounded-[20px] bg-[#005877] lg:max-h-[480px] min-h-[480px] lg:grid-cols-[35%_65%] lg:items-center">
+                <div class="space-y-4 md:space-y-5 p-6 md:p-8 md:pr-0!">
+                    <h1 class="text-white">
+                        A City Built <br class="hidden lg:block">
+                        Around Learning.
+                    </h1>
+
+                    <p class="text-white">
+                        More than a campus, Vivenns International Education City is a fully integrated education
+                        ecosystem designed to bring learning, research, skills, innovation, work and everyday life
+                        together.
+                    </p>
+                    <p class="text-white">
+                        The city will bring international universities, students, researchers, educators, industry and
+                        the wider community into one connected environment.
+                    </p>
+
+
+                </div>
+                <div class="relative h-full">
+                    <img src="images/a7.png" alt="Aerial view of Vivenns city for learning"
+                        class="h-full w-full object-cover hidden lg:block object-left" loading="lazy">
+                    <img src="images/vv-hero-mo-b01.png" alt="Aerial view of Vivenns city for learning"
+                        class="h-full w-full object-cover block lg:hidden object-center" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-3" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+            <div class="grid gap-6 lg:grid-cols-[0.64fr_1fr]">
+                <!-- Our Vision -->
+                <div class="rounded-[20px] bg-[#f1f6fe] flex flex-col justify-between">
+                    <div class="space-y-3 sm:space-y-4  p-6 sm:p-8">
+                        <h2 class="secondary_heading">
+                            The Masterplan
+                        </h2>
+                        <p class="text-[#5c5c5c]">
+                            Designed as a living knowledge ecosystem, the masterplan brings together academic, research,
+                            residential, social and community spaces around a connected campus spine.
+                        </p>
+                        <p class="text-[#5c5c5c]">
+                            At its heart is the Knowledge Spine — connecting the core of the campus with academic
+                            clusters
+                            and the wider residential and community ecosystem.
+                        </p>
+                    </div>
+                    <div class="h-auto">
+                        <img src="images/14.jpg" alt="" class=" rounded-b-2xl">
+                    </div>
+                </div>
+
+                <!-- The City -->
+                <div class="relative grid min-h-[254px] grid-cols-1 overflow-hidden rounded-[20px] bg-[#f1f6fe]"
+                    style="background-image: url('images/globe_banner.webp'); background-size: cover; background-position: top right;">
+                    <div class="relative space-y-3 sm:space-y-4  p-6 sm:p-8">
+                        <h2 class="secondary_heading text-white!">
+                            The Academic Precinct
+                        </h2>
+                        <p class="text-white!">
+                            Purpose-built spaces for international universities, specialist schools, learning and
+                            collaboration.
+                        </p>
+                        <p class="text-white!">
+                            Academic Clusters - Spaces designed to bring complementary disciplines and institutions
+                            together.
+                        </p>
+                        <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-2">
+                            <article class="min-h-38 rounded-[13px] bg-white p-[18px] sm:p-5">
+                                <div
+                                    class="w-16 flex items-center justify-center h-16 bg-[#5c5c5c]/10 rounded-full mb-4 p-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                        viewBox="0 0 24 24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path fill="none" stroke="#023161" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.5"
+                                            d="M4.26 10.147a60 60 0 0 0-.491 6.347A48.6 48.6 0 0 1 12 20.904a48.6 48.6 0 0 1 8.232-4.41a61 61 0 0 0-.491-6.347m-15.482 0a51 51 0 0 0-2.658-.813A60 60 0 0 1 12 3.493a60 60 0 0 1 10.399 5.84q-1.345.372-2.658.814m-15.482 0A51 51 0 0 1 12 13.489a50.7 50.7 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5a.75.75 0 0 0 0 1.5m0 0v-3.675A55 55 0 0 1 12 8.443m-7.007 11.55A5.98 5.98 0 0 0 6.75 15.75v-1.5" />
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="mb-2 text-lg font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                                    Academic Clusters</h3>
+                                <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">Spaces designed to bring
+                                    complementary disciplines and institutions together</p>
+                            </article>
+                            <article class="min-h-38 rounded-[13px] bg-white p-[18px] sm:p-5">
+                                <div
+                                    class="w-16 flex items-center justify-center h-16 bg-[#5c5c5c]/10 rounded-full mb-4 p-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                        viewBox="0 0 24 24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <g fill="none" stroke="#023161" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1.5">
+                                            <path
+                                                d="M6.047 9.375a3 3 0 1 0 0-6a3 3 0 0 0 0 6m-.5-8.25h1m-.5 0v2.25m3.359-1.066l.707.707m-.354-.353L8.168 4.254m3.129 1.621v1m0-.5h-2.25m1.066 3.359l-.707.707m.353-.354L8.168 8.496m-1.621 3.129h-1m.5 0v-2.25m-3.359 1.066l-.707-.707m.354.353l1.591-1.591M.797 6.875v-1m0 .5h2.25M1.981 3.016l.707-.707m-.353.354l1.591 1.591M18.146 9.1a6.134 6.134 0 0 1 .315 9.07a6.4 6.4 0 0 1-8.941 0a6.2 6.2 0 0 1-1.558-2.52" />
+                                            <path
+                                                d="M16.151 11.054a.913.913 0 0 1-1.277 0L13.6 9.8a.875.875 0 0 1 0-1.254l3.832-3.764a.915.915 0 0 1 1.277 0l1.277 1.255a.875.875 0 0 1 0 1.254z" />
+                                            <path
+                                                d="m19.168 5.236l2.59-2.592l-1.445-1.445m2.89 2.89l-1.445-1.445M5.797 15.65h5.058m-4.27 7.225h13.728m-6.503-2.89v2.89" />
+                                        </g>
+                                    </svg>
+
+                                </div>
+                                <h3
+                                    class="mb-2 text-lg font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                                    Research & Innovation</h3>
+                                <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">Facilities that connect
+                                    research, technology, entrepreneurship and industry.</p>
+                            </article>
+
+                            <article class="min-h-38 rounded-[13px] bg-white p-[18px] sm:p-5">
+                                <div
+                                    class="w-16 flex items-center justify-center h-16 bg-[#5c5c5c]/10 rounded-full mb-4 p-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                        viewBox="0 0 24 24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <g fill="none" stroke="#023161" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M7.5 10h-1c-1.414 0-2.121 0-2.56-.44C3.5 9.122 3.5 8.415 3.5 7s0-2.121.44-2.56C4.378 4 5.085 4 6.5 4h1c1.414 0 2.121 0 2.56.44c.44.439.44 1.146.44 2.56s0 2.121-.44 2.56C9.622 10 8.915 10 7.5 10m-4-4H2m20 0h-1.5m-4 4h1c1.414 0 2.121 0 2.56-.44c.44-.439.44-1.146.44-2.56s0-2.121-.44-2.56C19.622 4 18.915 4 17.5 4h-1c-1.414 0-2.121 0-2.56.44c-.44.439-.44 1.146-.44 2.56s0 2.121.44 2.56c.439.44 1.146.44 2.56.44" />
+                                            <path d="M13.5 6a1.5 1.5 0 0 0-3 0" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 14H6c-.932 0-1.398 0-1.765.152a2 2 0 0 0-1.083 1.083C3 15.602 3 16.068 3 17s0 1.398.152 1.765a2 2 0 0 0 1.083 1.083C4.602 20 5.068 20 6 20h15" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M20 20c-1.105 0-2-1.343-2-3s.895-3 2-3" />
+                                        </g>
+
+                                    </svg>
+
+                                </div>
+                                <h3
+                                    class="mb-2 text-lg font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                                    Central Library & Digital Knowledge Hub</h3>
+                                <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">A shared environment for
+                                    knowledge, learning and digital access.</p>
+                            </article>
+                            <article class="min-h-38 rounded-[13px] bg-white p-[18px] sm:p-5">
+                                <div
+                                    class="w-16 flex items-center justify-center h-16 bg-[#5c5c5c]/10 rounded-full mb-4 p-4">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em"
+                                        viewBox="0 0 14 14">
+                                        <path d="M0 0h14v14H0z" fill="none" />
+                                        <g fill="none" stroke="#023161" stroke-linecap="round" stroke-linejoin="round">
+                                            <path
+                                                d="M.707 13.438h12.75M3.86 5.687l3.222-2.53l3.222 2.53M4.35 7.813h5.464v5.625H4.35zM3.238 5.688h7.688v2.121H3.238zM1.618 7.81v5.628M12.546 7.81v5.625M.707 7.81h12.75M7.082 3.156V.674m0 0h1.25" />
+                                            <path
+                                                d="M6.095 11.203a.93.93 0 0 1 .931-.93v0a.93.93 0 0 1 .931.93v2.235H6.095z" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <h3
+                                    class="mb-2 text-lg font-medium leading-[1.22] tracking-[-.025em] text-ink text-[#023161]">
+                                    Auditorium & Convention Centre</h3>
+                                <p class="mb-0 leading-[1.55] text-[#5c5c5c]! text-sm!">A platform for conferences,
+                                    events, ideas and exchange.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="city" class="py-3">
+        <div class="container_wrapper">
+            <div class="grid gap-6 md:grid-cols-[60%_40%]">
+                <div class="relative overflow-hidden rounded-[32px] bg-[#eaf3fb]">
+
+                    <!-- ========================================
+         TOP TAB NAVIGATION
+    ========================================= -->
+                    <div class="relative z-20 px-3 pt-5 sm:px-5 md:px-8 md:pt-7">
+
+                        <div class="mx-auto grid w-full grid-cols-3 items-stretch gap-1
+               rounded-full bg-[#005877] p-1
+               md:flex md:w-fit md:items-center">
+
+                            <!-- TAB 01 -->
+                            <button type="button" data-tab="skills" class="tab-btn active flex min-w-0 items-center justify-center
+                   rounded-full px-2 py-2.5
+                   text-center text-[10px] leading-[1.2] font-medium
+                   transition-all duration-300
+                   sm:gap-1.5 sm:px-3 sm:text-[11px]
+                   md:gap-2 md:px-6 md:text-[13px]">
+
+                                <span class="tab-number hidden text-[10px] opacity-60 sm:inline">
+                                    01
+                                </span>
+
+                                <span>
+                                    Skills &amp; Careers
+                                </span>
+                            </button>
+
+
+                            <!-- TAB 02 -->
+                            <button type="button" data-tab="community" class="tab-btn flex min-w-0 items-center justify-center
+                   rounded-full px-2 py-2.5
+                   text-center text-[10px] leading-[1.2] font-medium
+                   transition-all duration-300
+                   sm:gap-1.5 sm:px-3 sm:text-[11px]
+                   md:gap-2 md:px-6 md:text-[13px]">
+
+                                <span class="tab-number hidden text-[10px] opacity-60 sm:inline">
+                                    02
+                                </span>
+
+                                <span>
+                                    Residential &amp; Community
+                                </span>
+                            </button>
+
+
+                            <!-- TAB 03 -->
+                            <button type="button" data-tab="wellbeing" class="tab-btn flex min-w-0 items-center justify-center
+                   rounded-full px-2 py-2.5
+                   text-center text-[10px] leading-[1.2] font-medium
+                   transition-all duration-300
+                   sm:gap-1.5 sm:px-3 sm:text-[11px]
+                   md:gap-2 md:px-6 md:text-[13px]">
+
+                                <span class="tab-number hidden text-[10px] opacity-60 sm:inline">
+                                    03
+                                </span>
+
+                                <span>
+                                    Sports, Arts &amp; Wellbeing
+                                </span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ========================================
+         TAB CONTENT
+    ========================================= -->
+                    <div class="relative z-10">
+
+                        <!-- ========================================
+             01 — SKILLS & CAREERS
+        ========================================= -->
+                        <article data-content="skills"
+                            class="tab-content grid gap-0 p-5 pt-7 md:grid-cols-[0.9fr_1.1fr] md:p-8 md:pt-7">
+
+                            <!-- CONTENT -->
+                            <div class="flex flex-col justify-center py-6 md:py-8 md:pr-8">
+
+
+                                <!-- Heading -->
+                                <h3
+                                    class="mt-2 max-w-[420px] text-3xl leading-[1.05] font-medium tracking-[-0.04em] text-[#023161]">
+                                    Skills &amp; Careers
+                                </h3>
+
+                                <!-- Description -->
+                                <p class="mt-2 max-w-[470px] text-[14px] leading-[1.8] text-[#5c6872] md:text-[15px]">
+                                    Learning extends beyond the classroom. Skills development,
+                                    professional education, industry engagement, certifications
+                                    and career pathways connect education to the world of work.
+                                </p>
+
+
+                            </div>
+
+                            <!-- IMAGE -->
+                            <div
+                                class="group/image relative min-h-[300px] overflow-hidden rounded-[24px] md:min-h-[430px]">
+
+                                <img src="images/skil.png" alt="Skills and career development"
+                                    class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover/image:scale-[1.04]">
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[#023161]/15 via-transparent to-transparent">
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- ========================================
+             02 — RESIDENTIAL & COMMUNITY
+        ========================================= -->
+                        <article data-content="community"
+                            class="tab-content hidden grid gap-0 p-5 pt-7 md:grid-cols-[0.9fr_1.1fr] md:p-8 md:pt-7">
+
+                            <!-- CONTENT -->
+                            <div class="flex flex-col justify-center py-6 md:py-8 md:pr-8">
+
+
+                                <!-- Heading -->
+                                <h3
+                                    class="mt-2 max-w-[420px] text-3xl leading-[1.05] font-medium tracking-[-0.04em] text-[#023161]">
+                                    Residential &amp; Community
+                                </h3>
+
+                                <!-- Description -->
+                                <p class="mt-2 max-w-[470px] text-[14px] leading-[1.8] text-[#5c6872] md:text-[15px]">
+                                    A city needs more than places to study. Residential spaces,
+                                    social infrastructure and everyday amenities create a connected
+                                    environment where students and the wider community can live,
+                                    learn and interact.
+                                </p>
+
+
+
+                            </div>
+
+                            <!-- IMAGE -->
+                            <div
+                                class="group/image relative min-h-[300px] overflow-hidden rounded-[24px] md:min-h-[430px]">
+
+                                <img src="images/cominuty.png" alt="Residential and community life"
+                                    class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover/image:scale-[1.04]">
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[#023161]/15 via-transparent to-transparent">
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- ========================================
+             03 — SPORTS, ARTS & WELLBEING
+        ========================================= -->
+                        <article data-content="wellbeing"
+                            class="tab-content hidden grid gap-0 p-5 pt-7 md:grid-cols-[0.9fr_1.1fr] md:p-8 md:pt-7">
+
+                            <!-- CONTENT -->
+                            <div class="flex flex-col justify-center py-6 md:py-8 md:pr-8">
+
+
+
+                                <!-- Heading -->
+                                <h3
+                                    class="mt-2 max-w-[420px] text-3xl leading-[1.05] font-medium tracking-[-0.04em] text-[#023161]">
+                                    Sports, Arts &amp; Wellbeing
+                                </h3>
+
+                                <!-- Description -->
+                                <p class="mt-2 max-w-[470px] text-[14px] leading-[1.8] text-[#5c6872] md:text-[15px]">
+                                    A holistic campus experience with spaces for sport,
+                                    recreation, healthcare, wellness, arts and social connection.
+                                </p>
+
+
+
+                            </div>
+
+                            <!-- IMAGE -->
+                            <div
+                                class="group/image relative min-h-[300px] overflow-hidden rounded-[24px] md:min-h-[430px]">
+
+                                <img src="images/sport.png" alt="Sports arts and wellbeing"
+                                    class="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover/image:scale-[1.04]">
+
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[#023161]/15 via-transparent to-transparent">
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+                <div class="md:max-w-[95%]">
+                    <div class="relative h-full w-full isolate min-h-[254px] overflow-hidden rounded-[20px] bg-[#005877] p-6 py-10 sm:px-8 bg-cover bg-right-top"
+                        style="background-image: url('images/n3.webp');">
+
+
+
+                        <div class="max-w-full space-y-3 sm:max-w-[90%] sm:space-y-4 ">
+                            <h2 class="secondary_heading text-white!">Student Experience</h2>
+
+                            <p class="text-white">
+                                A student experience built around Care. Connection. Wellbeing. Creating opportunities to
+                                learn,
+                                participate, connect and grow beyond the classroom.
+                            </p>
+
+                            <p class="text-white">
+                                Creating opportunities to learn, participate, connect and grow beyond the classroom.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="py-3.5" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+
+            <div class="group relative min-h-[420px] overflow-hidden rounded-[24px] bg-[#f1f6fe]
+                   md:min-h-[500px] lg:min-h-[560px]">
+
+                <!-- Background Image -->
+                <img src="images/a6.png" alt="Students outside a Vivenns education building" class="absolute inset-0 h-full w-full object-cover object-center
+                       transition-transform duration-1000 ease-out
+                       group-hover:scale-[1.025]" loading="lazy">
+
+
+                <!-- Content -->
+                <div class="relative z-10 mx-auto flex max-w-[760px] flex-col
+                       items-center px-5 pt-10 text-center
+                       sm:px-8 sm:pt-12
+                       lg:pt-14">
+
+
+                    <!-- Heading -->
+                    <h2 class="secondary_heading max-w-[700px]
+                           ">
+                        A knowledge civilisation
+                        <span class="block">reimagined.</span>
+                    </h2>
+
+                    <!-- Quote -->
+                    <div class="mt-2 flex items-center justify-center gap-3 sm:mt-4">
+
+
+                        <p class="text-[15px] font-medium italic
+                               tracking-[0.01em] text-[#023161]
+                               sm:text-base lg:text-lg">
+                            “Knowledge is not stored. It flows.”
+                        </p>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- Bottom Gradient for Better Image Depth -->
+                <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[30%]
+                       bg-gradient-to-t
+                       from-[#023161]/15
+                       to-transparent">
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-3.5">
+        <div class="container_wrapper">
+            <div class="">
+                <!-- Main footer row -->
+                <div class="flex flex-col gap-5 py-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+                    <a href="index.html" class="shrink-0" aria-label="Vivenns home">
+                        <img src="images/vivennslogo.png" alt="Vivenns" class="block h-auto w-[150px] sm:w-[180px]">
+                    </a>
+
+                    <nav aria-label="Footer navigation">
+                        <ul class="flex flex-col items-start gap-3 p-0 text-sm font-medium text-[#003D7D]!
+                               sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+                            <li class="list-none">
+                                <a href="our-vision.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Our Vision
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="education.html"
+                                    class="transition-colors active  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Explore The City
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="global-education-partners.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Global Partners
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="education-hub.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Education Hub
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="careers.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Careers
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="partners-with-us.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Partner With Us
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="the-city.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Project Updates
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="contact.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- <div class="my-4 h-px bg-[#dce7f5]"></div> -->
+
+                <!-- Legal footer row -->
+                <div class="flex flex-col gap-4 py-4 text-sm leading-normal text-[#5f6368]
+                        lg:flex-row lg:items-center lg:justify-between lg:leading-none">
+                    <p class="m-0">©2026 Vivenns. All Rights Reserved</p>
+
+                    <nav aria-label="Legal navigation">
+                        <ul class="flex flex-row items-start gap-3 p-0 font-medium text-[#003D7D]!
+                               sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+                            
+                            <li class="list-none">
+                                <a href="#siteHeader"
+                                    class="transition-colors text-xs md:text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Back To Top ↑
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuOpenIcon = document.getElementById("menuOpenIcon");
+        const menuCloseIcon = document.getElementById("menuCloseIcon");
+        const menuToggleText = document.getElementById("menuToggleText");
+
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle("hidden", !open);
+            menuToggle.setAttribute("aria-expanded", String(open));
+            menuToggleText.textContent = open
+                ? "Close navigation menu"
+                : "Open navigation menu";
+
+            menuOpenIcon.classList.toggle("opacity-0", open);
+            menuCloseIcon.classList.toggle("opacity-0", !open);
+            menuCloseIcon.classList.toggle("rotate-0", open);
+            menuCloseIcon.classList.toggle("rotate-[-45deg]", !open);
+        }
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            setMobileMenu(!isOpen);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                setMobileMenu(false);
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 1280) {
+                setMobileMenu(false);
+            }
+        });
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const buttons = document.querySelectorAll(".tab-btn");
+            const contents = document.querySelectorAll(".tab-content");
+
+            buttons.forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    const target = button.dataset.tab;
+
+                    buttons.forEach(btn => {
+                        btn.classList.remove("active");
+                    });
+
+                    button.classList.add("active");
+
+                    contents.forEach(content => {
+                        content.classList.add("hidden");
+                        content.classList.remove("tab-enter");
+                    });
+
+                    const activeContent = document.querySelector(
+                        `[data-content="${target}"]`
+                    );
+
+                    if (activeContent) {
+                        activeContent.classList.remove("hidden");
+
+                        void activeContent.offsetWidth;
+
+                        activeContent.classList.add("tab-enter");
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>

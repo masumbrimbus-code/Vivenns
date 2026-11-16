@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+    @apply overflow-x-hidden;
+}
+
+a {
+    @apply hover:text-[#FCC95C] transition-all duration-300 inline-flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+    font-family: "Playfair Display", serif;
+    line-height: 120% !important;
+}
+
+ul,
+ol {
+    @apply ml-0;
+}
+
+h2 {
+    @apply font-normal tracking-[-0.035em] text-black capitalize text-2xl;
+}
+
+.theme_button {
+    background: transparent;
+    @apply border border-[#033064] justify-center inline-flex sm:py-3 py-3 px-4 transition-all leading-[1.2] rounded-3xl text-sm sm:text-sm md:text-base font-medium text-[#033064] cursor-pointer text-center;
+}
+
+.theme_button svg {
+    @apply ml-2 h-4 w-4;
+}
+
+.theme_button:hover {
+    background: #FCC95C;
+    @apply border-transparent text-[#033064] transition-all;
+}
+
+.theme_button.light_mode {
+    @apply rounded-full bg-[#FCC95C] text-[#033064];
+}
+
+.theme_button.light_mode:hover {
+    background: transparent;
+    @apply border-[#FCC95C] text-[#FCC95C];
+}
+
+.theme_button.light_line {
+    @apply bg-none border text-white py-3.5 sm:py-3.5 border-white inline-flex gap-4 items-center bg-transparent transition-all;
+}
+
+.theme_button.light_line:hover {
+    @apply bg-white border-transparent text-black;
+}
+
+.container_wrapper {
+    @apply w-full max-w-321 mx-auto px-4;
+}
+
+.font_serif {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+ul li a.active {
+    @apply text-[#FCC95C];
+}
+
+.eyebrow_text {
+    @apply text-sm font-medium text-[#FCC95C];
+}
+
+.overlay {
+    @apply relative rounded-b-4xl;
+}
+
+.overlay::before {
+    content: "";
+    @apply absolute inset-0 z-10 bg-[#071c16]/35 via-transparent to-transparent rounded-b-4xl;
+}
+
+.overlay_light::before {
+    @apply rounded-[20px] bg-white/20;
+}
+
+p:last-child {
+    @apply !mb-0;
+}
+
+p {
+    @apply text-sm sm:text-base font-normal;
+    line-height: 180% !important;
+}
+
+h1 {
+    @apply text-3xl md:text-4xl leading-10;
+}
+
+h2.secondary_heading {
+    @apply text-2xl sm:text-3xl md:text-4xl font-normal text-[#015277];
+}
+
+/* .box_image::before{
+    content: "";
+    @apply bg-white/40 absolute top-0 left-0 w-full h-full z-10;
+} */
+.quote_block {
+    @apply relative top-26 -left-10 z-10 rounded-[20px] w-75 h-75 bg-white p-6;
+}
+
+.quote_block .icon {
+    @apply w-28 h-28 rounded-full rotate-180 flex items-center justify-center;
+}
+
+.education-swiper { 
+    width: 100%;
+    min-width: 0;
+    --swiper-theme-color: #023161;
+}
+
+.education-swiper .swiper-slide {
+    display: grid;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.education-swiper .swiper-pagination {
+    position: static;
+    margin-top: 20px;
+}
+
+.education-swiper .swiper-pagination-bullet {
+    position: relative;
+    width: 50px;
+    height: 5px;
+    border-radius: 999px;
+    background: #cbd5e1;
+    opacity: 1;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.education-swiper .swiper-pagination-bullet::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #023161;
+    border-radius: inherit;
+    transform: scaleX(0);
+    transform-origin: left center;
+}
+
+.education-swiper .swiper-pagination-bullet-active::after {
+    transform: scaleX(var(--autoplay-progress, 0));
+}
+
+@media only screen and (max-width: 767px) {
+    .overlay_mobile {
+        @apply relative z-10 rounded-b-4xl;
+    }
+
+    .overlay_mobile::before {
+        content: "";
+        @apply absolute inset-0 -z-1 bg-[#071c16]/35 via-transparent to-transparent rounded-b-4xl;
+    }
+
+    .quote_block {
+        @apply relative top-0 left-0 z-10 rounded-[20px] w-full h-auto bg-white p-6;
+    }
+
+    .theme_button.light_line {
+        @apply py-3;
+    }
+}
+
+.tab-btn {
+    color: rgba(255, 255, 255, 0.82);
+    background: transparent;
+}
+
+.tab-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.tab-btn.active {
+    color: #023161;
+    background: #ffc94d;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.tab-btn.active .tab-number {
+    opacity: 1;
+}
+
+/* tab switching animation */
+.tab-content.tab-enter {
+    animation: tabSwitch 0.5s cubic-bezier(.22, 1, .36, 1);
+}
+
+@keyframes tabSwitch {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* hide scrollbar on mobile tabs */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}

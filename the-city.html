@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivenns</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.11/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+</head>
+
+<body>
+    <header id="siteHeader" class="site_header relative z-50 w-full bg-white py-3 transition-all duration-300 sm:py-4">
+
+        <div class="container_wrapper">
+            <div
+                class="header_inner flex min-h-[52px] items-center justify-between gap-3 sm:min-h-[63px] sm:gap-5 xl:gap-6">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo shrink-0" aria-label="Vivenns home">
+                    <img src="images/vivennslogo.png" alt="Vivenns"
+                        class="block h-auto w-[165px] max-w-[62vw] sm:w-[205px] xl:w-[211px]">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden min-w-0 flex-1 xl:block" aria-label="Primary navigation">
+                    <ul class="flex items-center justify-end gap-3 2xl:gap-3.5">
+                        <li>
+                            <a href="our-vision.html"
+                                class="nav_link  whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Our Vision
+                            </a>
+                        </li>
+                        <li>
+                            <a href="education.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Explore The City
+                            </a>
+                        </li>
+                        <li>
+                            <a href="global-education-partners.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Global Partners
+                            </a>
+                        </li>                        
+                        <li>
+                            <a href="education-hub.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Education Hub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="careers.html"
+                                class="nav_link whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="the-city.html"
+                            class="nav_link active whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Project Updates
+                            </a>
+                        </li>
+                        <li>
+                            <a href="partners-with-us.html"
+                                class="nav_link  whitespace-nowrap text-[13px] font-medium text-[#015277] transition-colors duration-200 hover:text-[#FCC95C] 2xl:text-sm">
+                                Partner With Us
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Desktop Contact Button -->
+                <div class="hidden shrink-0 xl:block">
+                    <a href="contact.html"
+                        class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]!">
+                        Contact Us
+                        <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile / Tablet Menu Button -->
+                <button id="menuToggle" type="button"
+                    class="menu_toggle inline-grid h-11 w-11 shrink-0 place-items-center rounded-full text-[#015277] transition-colors hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#FCC95C] focus:ring-offset-2 xl:hidden"
+                    aria-controls="mobileMenu" aria-expanded="false">
+                    <span id="menuToggleText" class="sr-only">Open navigation menu</span>
+
+                    <svg id="menuOpenIcon"
+                        class="col-start-1 row-start-1 h-6 w-6 fill-none stroke-current stroke-[1.8] transition-all duration-200"
+                        viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" />
+                    </svg>
+
+                    <svg id="menuCloseIcon"
+                        class="col-start-1 row-start-1 h-6 w-6 rotate-[-45deg] fill-none stroke-current stroke-[1.8] opacity-0 transition-all duration-200"
+                        viewBox="0 0 24 24" stroke-linecap="round" aria-hidden="true">
+                        <path d="m6 6 12 12M18 6 6 18" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile / Tablet Navigation -->
+            <nav id="mobileMenu"
+                class="mobile_menu hidden border-t border-slate-100 pb-5 pt-2 xl:hidden absolute z-10 bg-white w-full top-[100%]"
+                aria-label="Mobile navigation">
+                <ul class="m-0 list-none p-0">
+                    <li class="border-b border-slate-100">
+                        <a href="our-vision.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Our Vision
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="education.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Explore The City
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="global-education-partners.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Global Partners
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="education-hub.html"
+                            class="nav_link  block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Education Hub
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="careers.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Careers
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="partners-with-us.html"
+                            class="nav_link block py-3.5 text-base font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Partner With Us
+                        </a>
+                    </li>
+                    <li class="border-b border-slate-100">
+                        <a href="the-city.html"
+                            class="nav_link block py-3.5 text-base active font-medium text-[#015277] transition-colors hover:text-[#FCC95C]">
+                            Project Updates
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="flex items-center justify-center w-full max-w-[90%]">
+                    <a href="contact.html"
+                        class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]! mt-4 w-full max-w-[90%] mx-auto block">
+                        Contact Us
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="py-3.5" aria-labelledby="city-learning-title">
+        <div class="container_wrapper">
+            <div
+                class="relative  grid overflow-hidden rounded-[20px] bg-[#005877] lg:max-h-[480px] min-h-[480px] lg:grid-cols-[30%_70%] lg:items-center">
+                <div class="space-y-4 md:space-y-5 p-6 md:p-8 md:pr-0!">
+                    <h1 class="text-white">
+                        See Vivenns <br class="block">
+                        <span class="text-[#E7B95D]">Take Shape.</span>
+                    </h1>
+
+                    <p class="text-white ">
+                        Follow the partnerships, milestones, ideas and developments shaping Vivenns International
+                        Education City.
+                    </p>
+
+                </div>
+                <div class="relative h-full">
+                    <img src="images/See_Vivenns_take_shape.png" alt="Aerial view of Vivenns city for learning"
+                        class="h-full w-full object-cover hidden lg:block object-left" loading="lazy">
+                    <img src="images/See_Vivenns_take_shape_(mob_ratio).png"
+                        alt="Aerial view of Vivenns city for learning"
+                        class="h-full w-full object-cover block lg:hidden object-center" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Iconify Icons -->
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+    <section class="py-3.5">
+        <div class="container_wrapper">
+            <div class="bg-[#f1f6fe]  rounded-3xl">
+                <div id="ecosystem"
+                    class="md:py-16 p-6 relative mx-auto  md:flex max-w-[1200px] justify-center items-center gap-5 md:block md:h-[900px]">
+
+                    <!-- SVG Connection & Circle -->
+                    <svg id="ecosystem-svg"
+                        class="pointer-events-none absolute inset-0 z-10 hidden h-full w-full md:block"
+                        aria-hidden="true">
+
+                        <path id="connection-line" fill="none" stroke="#005877" stroke-width="1.2"
+                            stroke-dasharray="2 3" class="opacity-0 transition-opacity duration-300" />
+
+                        <circle id="hover-circle" fill="none" stroke="#005877" stroke-width="1.2" stroke-dasharray="2 3"
+                            class="opacity-0 transition-opacity duration-300" />
+                    </svg>
+
+                    <!-- CENTER IMAGE -->
+                    <!-- CENTER IMAGE -->
+                    <div id="ecosystem-center"
+                        class="hidden md:flex relative order-first col-span-2 mx-auto  h-[170px] w-[170px] items-center justify-center overflow-hidden rounded-full bg-white md:absolute md:top-1/2 md:left-1/2 md:z-20 md:h-60 md:w-60 md:-translate-x-1/2 md:-translate-y-1/2">
+
+                        <!-- Dynamic Hover Image -->
+                        <img id="center-image" src="" alt=""
+                            class="absolute inset-0 h-full w-full scale-110 object-cover opacity-0 transition-all duration-500 ease-in-out">
+
+                        <!-- Default Vivenns Logo -->
+                        <img id="center-logo" src="images/vivennslogo.png" alt="Vivenns Logo"
+                            class="relative z-10 w-[82%] object-contain transition-opacity duration-500">
+
+                    </div>
+                    <!-- PARTNERSHIPS -->
+                    <button type="button" data-image="images/partnership.jpg"
+                        class="ecosystem-item bg-white md:bg-transparent w-full p-6 mb-4 md:mb-0 rounded-2xl group relative z-20 flex flex-col items-center  text-center md:absolute md:top-[30%] md:left-[21%] md:w-[260px] md:-translate-x-1/2 md:-translate-y-1/2">
+
+                        <span
+                            class="mb-4 flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#d7e7f0] text-[#005877] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#c4dfed]">
+                            <iconify-icon icon="lucide:handshake" width="30"></iconify-icon>
+                        </span>
+
+                        <h3 class="mb-2 font-serif text-xl text-[#005877] md:text-2xl">
+                            Partnerships
+                        </h3>
+
+                        <p class="max-w-[300px] md:max-w-[230px] text-[13px] leading-relaxed text-[#5c5c5c]">
+                            New institutions and collaborations joining the ecosystem.
+                        </p>
+                    </button>
+
+                    <!-- DEVELOPMENT -->
+                    <button type="button" data-image="images/h2.jpg"
+                        class="ecosystem-item bg-white md:bg-transparent w-full p-6 mb-4 md:mb-0 rounded-2xl group relative z-20 flex flex-col items-center  text-center md:absolute md:top-[18%] md:left-1/2 md:w-[260px] md:-translate-x-1/2 md:-translate-y-1/2">
+
+                        <span
+                            class="mb-4 flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#d7e7f0] text-[#005877] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#c4dfed]">
+                            <iconify-icon icon="lucide:boxes" width="30"></iconify-icon>
+                        </span>
+
+                        <h3 class="mb-2 font-serif text-xl text-[#005877] md:text-2xl">
+                            Development
+                        </h3>
+
+                        <p class="max-w-[300px] md:max-w-[230px] text-[13px] leading-relaxed text-[#5c5c5c]">
+                            Progress across the International Education City.
+                        </p>
+                    </button>
+
+                    <!-- NEWS -->
+                    <button type="button" data-image="images/newsa.png"
+                        class="ecosystem-item bg-white md:bg-transparent w-full mb-4 md:mb-0 p-6 rounded-2xl group relative z-20 flex flex-col items-center  text-center md:absolute md:top-[30%] md:left-[79%] md:w-[260px] md:-translate-x-1/2 md:-translate-y-1/2">
+
+                        <span
+                            class="mb-4 flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#d7e7f0] text-[#005877] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#c4dfed]">
+                            <iconify-icon icon="lucide:newspaper" width="30"></iconify-icon>
+                        </span>
+
+                        <h3 class="mb-2 font-serif text-xl text-[#005877] md:text-2xl">
+                            News
+                        </h3>
+
+                        <p class="max-w-[300px] md:max-w-[230px] text-[13px] leading-relaxed text-[#5c5c5c]">
+                            What is happening across Vivenns.
+                        </p>
+                    </button>
+
+                    <!-- MEDIA -->
+                    <button type="button" data-image="images/media.jpg"
+                        class="ecosystem-item bg-white md:bg-transparent w-full mb-4 md:mb-0 p-6 rounded-2xl group relative z-20 flex flex-col items-center  text-center md:absolute md:top-[60%] md:left-[21%] md:w-[260px] md:-translate-x-1/2 md:-translate-y-1/2">
+
+                        <span
+                            class="mb-4 flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#d7e7f0] text-[#005877] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#c4dfed]">
+                            <iconify-icon icon="lucide:clapperboard" width="30"></iconify-icon>
+                        </span>
+
+                        <h3 class="mb-2 font-serif text-xl text-[#005877] md:text-2xl">
+                            Media
+                        </h3>
+
+                        <p class="max-w-[300px] md:max-w-[230px] text-[13px] leading-relaxed text-[#5c5c5c]">
+                            Stories and coverage from Vivenns and its growing network.
+                        </p>
+                    </button>
+
+                    <!-- EVENTS -->
+                    <button type="button" data-image="images/sport.png"
+                        class="ecosystem-item bg-white md:bg-transparent w-full mb-4 md:mb-0 p-6 rounded-2xl group relative z-20 flex flex-col items-center  text-center md:absolute md:top-[60%] md:left-[79%] md:w-[260px] md:-translate-x-1/2 md:-translate-y-1/2">
+
+                        <span
+                            class="mb-4 flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#d7e7f0] text-[#005877] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#c4dfed]">
+                            <iconify-icon icon="lucide:calendar-check" width="30"></iconify-icon>
+                        </span>
+
+                        <h3 class="mb-2 font-serif text-xl text-[#005877] md:text-2xl">
+                            Events
+                        </h3>
+
+                        <p class="max-w-[300px] md:max-w-[230px] text-[13px] leading-relaxed text-[#5c5c5c]">
+                            Conversations, announcements and events bringing the ecosystem together.
+                        </p>
+                    </button>
+
+                    <!-- IDEAS -->
+                    <button type="button" data-image="images/005.png"
+                        class="ecosystem-item bg-white md:bg-transparent w-full p-6 mb-4 md:mb-0 rounded-2xl group relative z-20 flex flex-col items-center  text-center md:absolute md:top-[83%] md:left-1/2 md:w-[260px] md:-translate-x-1/2 md:-translate-y-1/2">
+
+                        <span
+                            class="mb-4 flex h-[60px] w-[60px] items-center justify-center rounded-full bg-[#d7e7f0] text-[#005877] transition-all duration-300 group-hover:-translate-y-1 group-hover:bg-[#c4dfed]">
+                            <iconify-icon icon="lucide:lightbulb" width="30"></iconify-icon>
+                        </span>
+
+                        <h3 class="mb-2 font-serif text-xl text-[#005877] md:text-2xl">
+                            Ideas
+                        </h3>
+
+                        <p class="max-w-[300px] md:max-w-[230px] text-[13px] leading-relaxed text-[#5c5c5c]">
+                            Thinking about education, skills, innovation and the future of learning.
+                        </p>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-3.5" aria-label="Discover Vivenns">
+        <div class="container_wrapper">
+            <div class="">
+                <div class="min-h-100 overflow-hidden relative  rounded-[20px] bg-[#003D7D] bg-center bg-cover bg-no-repeat p-6 sm:p-8"
+                    style="background-image: url(images/A_platform_for_collaboration.png);">
+                    <div class="absolute inset-0 bg-gradient-to-b
+                        from-[#005877] from-0%
+                        via-[#005877]/85 via-35%
+                        to-transparent to-100%">
+                    </div>
+                    <div class="max-w-full  md:max-w-160 space-y-3 sm:space-y-4 relative z-10">
+                        <h2 class="secondary_heading text-white!">
+                            A Platform For Collaboration
+                        </h2>
+                        <p class="text-white">
+                            Whether establishing a presence, developing talent or advancing research and innovation,
+                            Vivenns creates a platform for organisations to connect with students, universities,
+                            industry and the wider Andhra Pradesh ecosystem.
+                        </p>
+
+                        <div class="flex flex-col  items-start gap-3 sm:flex-row sm:items-center sm:gap-4">
+                            <a href="partners-with-us.html"
+                                class="theme_button light_mode border-transparent! hover:border-[#FCC95C]! hover:text-[#FCC95C]!">
+                                Partner With Us.
+                                <svg class="fill-none stroke-current stroke-2" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M2 8h11M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="py-3.5">
+        <div class="container_wrapper">
+            <div class="">
+                <!-- Main footer row -->
+                <div class="flex flex-col gap-5 py-4 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
+                    <a href="index.html" class="shrink-0" aria-label="Vivenns home">
+                        <img src="images/vivennslogo.png" alt="Vivenns" class="block h-auto w-[150px] sm:w-[180px]">
+                    </a>
+
+                    <nav aria-label="Footer navigation">
+                        <ul class="flex flex-col items-start gap-3 p-0 text-sm font-medium text-[#003D7D]!
+                               sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+                            <li class="list-none">
+                                <a href="our-vision.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Our Vision
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="education.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Explore The City
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="global-education-partners.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Global Partners
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="education-hub.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Education Hub
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="careers.html"
+                                    class="transition-colors  text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Careers
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="partners-with-us.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Partner With Us
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="the-city.html"
+                                    class="transition-colors active text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Project Updates
+                                </a>
+                            </li>
+                            <li class="list-none">
+                                <a href="contact.html"
+                                    class="transition-colors text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- <div class="my-4 h-px bg-[#dce7f5]"></div> -->
+
+                <!-- Legal footer row -->
+                <div class="flex flex-col gap-4 py-4 text-sm leading-normal text-[#5f6368]
+                        lg:flex-row lg:items-center lg:justify-between lg:leading-none">
+                    <p class="m-0">©2026 Vivenns. All Rights Reserved</p>
+
+                    <nav aria-label="Legal navigation">
+                        <ul class="flex flex-row items-start gap-3 p-0 font-medium text-[#003D7D]!
+                               sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3">
+                            
+                            <li class="list-none">
+                                <a href="#siteHeader"
+                                    class="transition-colors text-xs md:text-sm hover:text-[#ad7d17] focus:outline-none focus-visible:text-[#ad7d17]">
+                                    Back To Top ↑
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const stage = document.getElementById("ecosystem");
+            const items = stage.querySelectorAll(".ecosystem-item");
+            const center = document.getElementById("ecosystem-center");
+            const centerImage = document.getElementById("center-image");
+            const centerLogo = document.getElementById("center-logo");
+
+            const svg = document.getElementById("ecosystem-svg");
+            const circle = document.getElementById("hover-circle");
+            const line = document.getElementById("connection-line");
+
+            let activeItem = null;
+            let imageToken = 0;
+
+            function position(element) {
+                const parent = stage.getBoundingClientRect();
+                const rect = element.getBoundingClientRect();
+
+                return {
+                    x: rect.left - parent.left + rect.width / 2,
+                    y: rect.top - parent.top + rect.height / 2
+                };
+            }
+
+            function drawSVG(item) {
+                if (window.innerWidth < 768) return;
+
+                const a = position(item);
+                const b = position(center);
+
+                const radius = Math.max(
+                    item.offsetWidth,
+                    item.offsetHeight
+                ) * 0.53;
+
+                svg.setAttribute(
+                    "viewBox",
+                    `0 0 ${stage.clientWidth} ${stage.clientHeight}`
+                );
+
+                circle.setAttribute("cx", a.x);
+                circle.setAttribute("cy", a.y);
+                circle.setAttribute("r", radius);
+
+                // Draw a curved connector from circle to center
+                const dx = b.x - a.x;
+                const dy = b.y - a.y;
+                const distance = Math.hypot(dx, dy);
+
+                if (!distance) return;
+
+                const ux = dx / distance;
+                const uy = dy / distance;
+
+                const x1 = a.x + ux * radius;
+                const y1 = a.y + uy * radius;
+
+                const x2 = b.x - ux * (center.offsetWidth / 2);
+                const y2 = b.y - uy * (center.offsetHeight / 2);
+
+                const mx = (x1 + x2) / 2;
+                const my = (y1 + y2) / 2 - 25;
+
+                line.setAttribute(
+                    "d",
+                    `M ${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`
+                );
+
+                // Animate outline
+                const circumference = 2 * Math.PI * radius;
+                const lineLength = line.getTotalLength();
+
+                circle.style.transition = "none";
+                line.style.transition = "none";
+
+                // Keep the dotted pattern
+                circle.style.strokeDasharray = "1 4";
+                line.style.strokeDasharray = "4 5";
+
+                // Hide initially
+                circle.style.strokeDashoffset = circumference;
+                line.style.strokeDashoffset = lineLength;
+
+                // Animate
+                circle.style.transition = "none";
+                line.style.transition = "none";
+
+                // Force reflow
+                circle.getBoundingClientRect();
+
+                circle.style.transition = "stroke-dashoffset 700ms ease";
+                line.style.transition = "stroke-dashoffset 700ms ease 150ms";
+
+                circle.style.strokeDashoffset = "0";
+                line.style.strokeDashoffset = "0";
+
+                circle.classList.remove("opacity-0");
+                line.classList.remove("opacity-0");
+
+                circle.classList.add("opacity-100");
+                line.classList.add("opacity-100");
+
+                // Force layout before animation
+                circle.getBoundingClientRect();
+
+                circle.style.transition = "stroke-dashoffset 700ms ease";
+                line.style.transition = "stroke-dashoffset 700ms ease 150ms";
+
+                circle.style.strokeDashoffset = "0";
+                line.style.strokeDashoffset = "0";
+            }
+
+            function activate(item) {
+                if (activeItem === item) return;
+
+                activeItem = item;
+                const token = ++imageToken;
+
+                const image = new Image();
+
+                image.onload = function () {
+                    if (token !== imageToken) return;
+
+                    centerImage.src = item.dataset.image;
+                    centerImage.alt = item.querySelector("h3").textContent.trim();
+
+                    centerImage.classList.remove("opacity-0", "scale-110");
+                    centerImage.classList.add("opacity-100", "scale-100");
+
+                    centerLogo.classList.remove("opacity-100");
+                    centerLogo.classList.add("opacity-0");
+                };
+
+                image.src = item.dataset.image;
+
+                drawSVG(item);
+            }
+
+            function reset() {
+                activeItem = null;
+                imageToken++;
+
+                centerImage.classList.remove("opacity-100", "scale-100");
+                centerImage.classList.add("opacity-0", "scale-110");
+
+                centerLogo.classList.remove("opacity-0");
+                centerLogo.classList.add("opacity-100");
+
+                circle.classList.remove("opacity-100");
+                line.classList.remove("opacity-100");
+
+                circle.classList.add("opacity-0");
+                line.classList.add("opacity-0");
+            }
+
+            items.forEach(item => {
+                item.addEventListener("mouseenter", () => activate(item));
+                item.addEventListener("focus", () => activate(item));
+                item.addEventListener("click", () => activate(item));
+            });
+
+            stage.addEventListener("mouseleave", reset);
+
+            stage.addEventListener("focusout", event => {
+                if (!stage.contains(event.relatedTarget)) reset();
+            });
+
+            window.addEventListener("resize", () => {
+                if (activeItem) drawSVG(activeItem);
+            });
+
+        });
+    </script>
+
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuOpenIcon = document.getElementById("menuOpenIcon");
+        const menuCloseIcon = document.getElementById("menuCloseIcon");
+        const menuToggleText = document.getElementById("menuToggleText");
+
+        function setMobileMenu(open) {
+            mobileMenu.classList.toggle("hidden", !open);
+            menuToggle.setAttribute("aria-expanded", String(open));
+            menuToggleText.textContent = open
+                ? "Close navigation menu"
+                : "Open navigation menu";
+
+            menuOpenIcon.classList.toggle("opacity-0", open);
+            menuCloseIcon.classList.toggle("opacity-0", !open);
+            menuCloseIcon.classList.toggle("rotate-0", open);
+            menuCloseIcon.classList.toggle("rotate-[-45deg]", !open);
+        }
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            setMobileMenu(!isOpen);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                setMobileMenu(false);
+            }
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 1280) {
+                setMobileMenu(false);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
